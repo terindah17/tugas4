@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biodata — Header & Footer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --accent:#ff7aa2; /* pastel pink */
+      --muted:#6b7280;
+      --radius:14px;
+      --container-w:900px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:var(--bg); color:#111}
+
+    .wrap{
+      max-width:var(--container-w);
+      margin:40px auto;
+      padding:28px;
+    }
+
+    /* Card */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,1));
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(17,24,39,0.08);
+      overflow:hidden;
+      border:1px solid rgba(17,24,39,0.04);
+    }
+
+    /* Header */
+    header.header{
+      display:flex;align-items:center;gap:16px;padding:20px 24px;background:linear-gradient(90deg,var(--accent), #ffdede);
+      color:white;
+    }
+    .brand{
+      display:flex;flex-direction:column;line-height:1;
+    }
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.6px;font-weight:700}
+    .brand p{margin:2px 0 0;font-size:13px;opacity:0.95}
+
+    /* Main content */
+    .content{
+      display:flex;gap:24px;padding:28px;
+      align-items:flex-start;
+    }
+    .avatar{
+      width:160px;min-width:160px;height:160px;border-radius:12px;background:linear-gradient(180deg,#ffe8ef,#ffdfe6);display:flex;align-items:center;justify-content:center;font-weight:600;color:rgba(0,0,0,0.6);font-size:18px
+    }
+
+    .info{
+      flex:1;
+    }
+    .info h2{margin:0 0 6px;font-size:22px}
+    .meta{color:var(--muted);margin-bottom:14px}
+
+    dl{display:grid;grid-template-columns:160px 1fr;gap:10px 18px;margin:0}
+    dt{color:var(--muted);font-weight:600}
+    dd{margin:0}
+
+    .badges{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .badge{background:#fff;padding:6px 10px;border-radius:999px;border:1px solid rgba(17,24,39,0.06);font-weight:600;font-size:13px}
+
+    /* Footer */
+    footer.footer{
+      display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:linear-gradient(180deg, #fff,#f9fafb);border-top:1px solid rgba(17,24,39,0.04);
+    }
+    .sig{font-size:13px;color:var(--muted)}
+    .thanks{font-weight:700;color:var(--accent)}
+
+    /* Utility: print styles */
+    @media print{
+      body{background:white}
+      .wrap{margin:0;padding:0}
+      .card{box-shadow:none;border-radius:0}
+      header.header{background:transparent;color:black}
+      .avatar{background:#eaeaea}
+    }
+
+    /* Responsive */
+    @media (max-width:720px){
+      .content{flex-direction:column}
+      .avatar{width:120px;height:120px;min-width:unset}
+      dl{grid-template-columns:120px 1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="region" aria-label="Biodata">
+
+      <!-- HEADER -->
+      <header class="header">
+        <div style="width:56px;height:56px;border-radius:10px;background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;font-weight:800;">BD</div>
+        <div class="brand">
+          <h1>Biodata Diri</h1>
+          <p>Profil singkat — lengkap dengan header &amp; footer</p>
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+    <section class="content">
+    <div class="avatar">
+    <img src="foto2.jpg" alt="Foto Profil" style="width:100%; height:100%; object-fit:cover; border-radius:12px;">
+    </div>
+
+
+        <div class="info">
+          <h2>Terindahpassaramadhani</h2>
+
+          <dl>
+            <dt>Nama Panggilan</dt><dd>sasa</dd>
+            <dt>Alamat</dt><dd>Jl.hoscokroaminoto, kecamatan tanggul wetan, kab.jember</dd>
+            <dt>No. HP</dt><dd>+62 895-1774-8053</dd>
+            <dt>Email</dt><dd>Terindahpassaramadhani@gmail.com</dd>
+            <dt>Hobi</dt><dd>menyiram bunga</dd>
+            <dt>Cita-cita</dt><dd>contect kreator</dd>
+          </dl>
+
+    
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="sig">Dibuat: 11 Agustus 2025</div>
+        <div class="thanks">~ Terima Kasih ~</div>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>
